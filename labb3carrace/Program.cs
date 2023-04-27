@@ -32,13 +32,13 @@ namespace labb3carrace
             do
             {
                 Console.Clear();
-                Console.Write("\n\tCar Name: ");
+                Console.Write("\n\tCar name: ");
                 string carName = Console.ReadLine();
 
-                Console.Write("\n\tCar Topspeed: ");
+                Console.Write("\n\tCar top speed: ");
                 decimal.TryParse(Console.ReadLine(), out decimal topSpeed);
 
-                Console.Write("\n\tTime to topspeed: ");
+                Console.Write("\n\tTime to top speed: ");
                 decimal.TryParse(Console.ReadLine(), out decimal timeToTopSpeed);
 
                 Car newCar = new Car(carName, topSpeed, timeToTopSpeed);
@@ -105,8 +105,8 @@ namespace labb3carrace
         {
             foreach (Car car in carList)
             {
-                Console.Write($"\n\tCar: {car._name}" +
-                    $"\n\tSpeed: {car._currentSpeed}, Distance: {car._totalDistanceTravelled}m, Time spent driving: {car._time}, Problem: {car._problem}");
+                Console.Write($"\nCar: {car._name}" +
+                    $"\nCurrent speed: {car._currentSpeed}km/h, Top speed {car._topSpeed}km/h, Time to top speed {car._timeToTopSpeed}s, Distance: {car._totalDistanceTravelled}m, Time spent driving: {car._time}s, Problem: {car._problem}");
                 Console.WriteLine();
             }
         }

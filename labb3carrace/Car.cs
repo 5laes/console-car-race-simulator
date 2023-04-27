@@ -63,7 +63,7 @@ namespace labb3carrace
 
             if (num == 5 || num == 10 || num == 15 || num == 20 || num == 25 || num == 30 || num == 35 || num == 40 || num == 45 || num == 50)
             {
-                _problem = "Engine failure, topspeed permanently lowered by 1";
+                _problem = "Engine failure, top speed permanently lowered by 1";
                 _currentSpeed -= 1;
                 _topSpeed-= 1;
             }
@@ -84,7 +84,7 @@ namespace labb3carrace
             {
                 _currentSpeed = 0;
                 _timeSpentAccelerating = 0;
-                for (int i = 10; i > 0; i--)
+                for (int i = 20; i > 0; i--)
                 {
                     _problem = $"Change tires, wait {i} sec";
                     Thread.Sleep(1000);
